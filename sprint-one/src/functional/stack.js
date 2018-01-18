@@ -12,13 +12,13 @@ var Stack = function() {
   };
 
   someInstance.pop = function() {
-    count -= 1;
+    count--;
     //delete storage;
     return storage[count];
   };
 
   someInstance.size = function() {
-    if(count <  0) {
+    if (count <  0) {
       return 0; 
     }
     return count;
