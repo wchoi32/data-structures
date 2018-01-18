@@ -15,9 +15,10 @@ var Queue = function() {
 
   someInstance.dequeue = function() {
     if(enq - deq) {
+      var beforeDelete = storage[deq];
       delete storage[deq];
       deq++
-      return storage[deq];
+      return beforeDelete;
     }
   };
 
